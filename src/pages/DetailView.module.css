@@ -1,0 +1,156 @@
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.backLink {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.cycle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.position {
+  margin-right: 0.5rem;
+  color: var(--steel);
+  font-weight: 600;
+}
+
+.step {
+  display: inline-block;
+  min-width: 6rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.step:hover {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.disabled {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--steel);
+  opacity: 0.6;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+}
+
+.heroInner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(10rem, 18rem) 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.poster {
+  border: 6px solid var(--card);
+  align-self: start;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.tagline {
+  margin: 0.4rem 0 0;
+  color: var(--safelight);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.genre {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid rgb(238 242 246 / 55%);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.overview {
+  max-width: 62ch;
+  margin: 1.25rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 1.75rem 0 0;
+}
+
+.facts dt {
+  color: rgb(238 242 246 / 70%);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.facts dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sub {
+  display: block;
+  color: rgb(238 242 246 / 70%);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.missing {
+  padding: 2rem 0;
+}
+
+@media (max-width: 40rem) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .poster {
+    max-width: 12rem;
+  }
+}

@@ -1,0 +1,58 @@
+/* Design tokens: a dark theme with a Petronas-green accent (ink, now
+   light text; paper, now the dark page tone) plus one safelight-gold
+   highlight. */
+:root {
+  --ink: #eef2f0;
+  --cyan: #00c2a0;
+  --paper: #0b1210;
+  --card: #131c19;
+  --steel: #8fa39d;
+  --line: #243330;
+  --safelight: #f0b429;
+
+  --page-width: 68rem;
+  --page-pad: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-stretch: 125%;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+}
+
+a {
+  color: var(--cyan);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

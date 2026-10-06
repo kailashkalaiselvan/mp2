@@ -1,0 +1,63 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1rem var(--page-pad) 1.5rem;
+}
+
+.brand {
+  color: var(--ink);
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: var(--cyan);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  background: rgb(238 242 246 / 14%);
+}
+
+.active,
+.active:hover {
+  background: var(--cyan);
+  color: #ffffff;
+}
+
+/* Film-strip perforations along the bottom edge of the header. */
+.sprockets {
+  position: absolute;
+  inset: auto 0 6px 0;
+  height: 6px;
+  background-image: linear-gradient(90deg, var(--cyan) 10px, transparent 10px);
+  background-size: 24px 6px;
+  opacity: 0.35;
+}
